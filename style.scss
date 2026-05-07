@@ -1,8 +1,7 @@
  <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
-    <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -10,7 +9,7 @@
         }
 
         body {
-            /* Фоновое изображение */
+
             background-image: url('https://i.pinimg.com/736x/d4/bd/c7/d4bdc7d8529ed65e408711248e32cc67.jpg');
             background-size: cover;
             background-position: center top;
@@ -23,7 +22,6 @@
             color: #111;
         }
 
-        /* Тёмное наложение поверх фона для читаемости */
         body::before {
             content: "";
             position: fixed;
@@ -36,7 +34,6 @@
             pointer-events: none;
         }
 
-        /* Все содержимое должно быть выше затемнения */
         .container,
         .hero-area,
         .main-card,
