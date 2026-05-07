@@ -16,11 +16,41 @@
         }
 
         body {
-            background-color: #5e1428;
+            /* Фоновое изображение */
+            background-image: url('https://i.pinimg.com/736x/d4/bd/c7/d4bdc7d8529ed65e408711248e32cc67.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
             font-family: 'Merriweather', Georgia, serif;
             font-weight: 400;
             line-height: 1.4;
             color: #111;
+        }
+
+        /* Тёмное наложение поверх фона для читаемости */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Все содержимое должно быть выше затемнения */
+        .container,
+        .hero-area,
+        .main-card,
+        .top-nav,
+        .interview-main,
+        .tattle-feed {
+            position: relative;
+            z-index: 1;
         }
 
         .container {
@@ -208,7 +238,6 @@
             margin-bottom: 32px;
         }
 
-        /* Контейнер для навигации – флекс слева направо */
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -229,18 +258,16 @@
             padding: 0;
         }
 
-        /* Применяем шрифт Courier Prime ко всем ссылкам в навигации (и слева, и справа) */
         .nav-links a,
         .nav-about a {
             font-family: 'Courier Prime', monospace;
             font-weight: 700;
-            font-size: 20px;          /* чуть больше, чем было (было 16px) */
+            font-size: 20px;
             color: #111;
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        /* Точки-разделители только между элементами .nav-links, кроме последнего */
         .nav-links li:not(:last-child)::after {
             content: " • ";
             margin: 0 8px 0 10px;
@@ -255,10 +282,27 @@
             color: #b13e5a;
         }
 
-        /* about справа — без точек, такого же размера */
         .nav-about {
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
+
+        .about-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .about-icons img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
         .nav-about a {
             font-size: 20px;
         }
@@ -607,10 +651,14 @@
             }
             .nav-links a,
             .nav-about a {
-                font-size: 18px; /* чуть меньше на мобильных, но всё равно крупнее оригинала */
+                font-size: 18px;
             }
             .nav-links li:not(:last-child)::after {
                 font-size: 18px;
+            }
+            .about-icons img {
+                width: 30px;
+                height: 30px;
             }
         }
 
@@ -664,6 +712,11 @@
                     </ul>
                     <div class="nav-about">
                         <a href="#">about</a>
+                        <div class="about-icons">
+                            <img src="https://i.pinimg.com/736x/1b/99/b0/1b99b01522fa3359e3e13497f5121773.jpg" alt="icon1">
+                            <img src="https://i.pinimg.com/736x/94/68/15/946815f30e42ae74087c273a7ba87dbc.jpg" alt="icon2">
+                            <img src="https://i.pinimg.com/736x/0c/ff/4f/0cff4f6ef3db98b8109e8c72e402f188.jpg" alt="icon3">
+                        </div>
                     </div>
                 </div>
             </div>
