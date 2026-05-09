@@ -344,6 +344,14 @@ body::before {
     gap: 0;
 }
 
+.mini-tattle-grid .tattle-item {
+    margin-bottom: 3px;
+}
+
+.mini-tattle-grid .tattle-item:last-child {
+    margin-bottom: 0;
+}
+
 .tattle-item {
     padding: 8px 24px 8px 24px;
     transition: background 0.2s;
@@ -419,6 +427,10 @@ body::before {
     background: #fefcfc;
     padding: 6px 5px 6px 5px;
     border: 1px dashed #aaa;
+}
+
+.interview-main + .interview-main {
+    margin-top: 40px;
 }
 
 .interview-card {
@@ -667,4 +679,4 @@ button, input, .main-card, .tattle-item, .interview-card, .search-input, .search
 
 i, em, .italic {
     font-style: normal;
-}
+}   
