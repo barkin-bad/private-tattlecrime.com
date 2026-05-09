@@ -258,7 +258,6 @@ body::before {
     transition: color 0.2s;
 }
 
-/* точки между пунктами навигации — цвет как у кнопки SEARCH, увеличенные отступы */
 .nav-links li:not(:last-child)::after {
     content: " • ";
     margin: 0 20px 0 20px;
@@ -595,7 +594,6 @@ body::before {
         margin-top: 8px;
         padding: 12px 0 16px 0;
     }
-    /* увеличенные отступы для точек на мобильных */
     .nav-links li:not(:last-child)::after {
         margin: 0 12px 0 12px;
     }
