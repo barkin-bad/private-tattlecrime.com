@@ -417,15 +417,27 @@ body::before {
 }
 
 .tattle-meta a {
-    color: #333;
     text-decoration: none;
-    transition: color 0.2s, border-color 0.2s;
-    border-bottom: 1px solid transparent;
+    border-bottom: none;
 }
 
-.tattle-meta a:hover {
-    color: #b13e5a;
-    border-bottom-color: #b13e5a;
+.arrow-icon {
+    height: 18px;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+a:hover .arrow-icon {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: none;
 }
 
 .interview-main {
@@ -520,14 +532,12 @@ body::before {
     font-weight: 400;
     color: #b13e5a;
     text-decoration: none;
-    border-bottom: 1.5px solid #e2b7c2;
     transition: 0.2s;
     font-family: 'Merriweather', Georgia, serif;
 }
 
 .read-more:hover {
     color: #2c8c7a;
-    border-bottom-color: #2c8c7a;
 }
 
 .interview-card.compact {
