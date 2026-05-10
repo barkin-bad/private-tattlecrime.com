@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>tattlecrime — Freddie Lounds</title>
+    <title>tattlecrime - Freddie Lounds</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
             <div class="user-area">
                 <div class="auth-wrapper">
                     <div class="auth-links">
-                        <a href="#">login</a>
+                        <a href="#" id="loginLink">login</a>
                         <span class="vert-dashed" aria-hidden="true"></span>
-                        <a href="#">sign up</a>
+                        <a href="#" id="signupLink">sign up</a>
                     </div>
                     <div class="auth-underline"></div>
                 </div>
@@ -66,7 +66,7 @@
                                 <div class="tattle-title">Article:</div>
                                 <div class="tattle-desc">Florida Teacher Who Mocked Looks, Brains Of His Students Now On Firing Line</div>
                                 <div class="tattle-meta">
-                                    <a href="https://www.thesmokinggun.com/buster/florida/florida-teacher-mocks-students-768562" target="_blank" rel="noopener noreferrer">"Читать далее"</a>
+                                    <a href="https://www.thesmokinggun.com/buster/florida/florida-teacher-mocks-students-768562" target="_blank" rel="noopener noreferrer">"Read more"</a>
                                 </div>
                             </div>
                             <div class="tattle-item">
@@ -74,7 +74,7 @@
                                 <div class="tattle-title">Article:</div>
                                 <div class="tattle-desc">Man Arrested For Washing Cursing Girlfriend Mouth Out With Liquid Dish Soap</div>
                                 <div class="tattle-meta">
-                                    <a href="https://www.thesmokinggun.com/buster/domestic-abuse/man-busted-for-soap-attack-546091" target="_blank" rel="noopener noreferrer">"Читать далее"</a>
+                                    <a href="https://www.thesmokinggun.com/buster/domestic-abuse/man-busted-for-soap-attack-546091" target="_blank" rel="noopener noreferrer">"Read more"</a>
                                 </div>
                             </div>
                             <div class="tattle-item">
@@ -82,7 +82,7 @@
                                 <div class="tattle-title">Locked Up:</div>
                                 <div class="tattle-desc">Locked Up: Pennsylvania Cops Arrest Dealer, 20. Who Held Woman's Lost iPhone For Ransom</div>
                                 <div class="tattle-meta">
-                                    <a href="https://www.thesmokinggun.com/buster/iphone-held-for-ransom-687341" target="_blank" rel="noopener noreferrer">"Читать далее"</a>
+                                    <a href="https://www.thesmokinggun.com/buster/iphone-held-for-ransom-687341" target="_blank" rel="noopener noreferrer">"Read more"</a>
                                 </div>
                             </div>
                             <div class="tattle-item">
@@ -90,7 +90,7 @@
                                 <div class="tattle-title">Press Pass:</div>
                                 <div class="tattle-desc">The Ripper's Secret Supper — Inside the FBI's Off-the-Record Dinner</div>
                                 <div class="tattle-meta">
-                                    <a href="https://i.pinimg.com/736x/e5/ea/7c/e5ea7c48233acbc7dee3166dbff428d1.jpg" target="_blank" rel="noopener noreferrer">"Читать далее"</a>
+                                    <a href="https://i.pinimg.com/736x/e5/ea/7c/e5ea7c48233acbc7dee3166dbff428d1.jpg" target="_blank" rel="noopener noreferrer">"Read more"</a>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                 <div class="interview-body">
                                     <p><b>Article:</b></p>
                                     <p>Something terrible lurks within the walls of the Baltimore State Hospital for the Criminally Insane. Though many inmates at this Maximum Security "rehabilitation campus" boast some of the most horrific homicides on the Eastern Seaboard, one man has recently emerged as a different kind of killer. His name in Dr. Abel Gideon. And strong evidence has surfaced that he's far more than a mild-mannered surgeon who cruelly murdered his wife. Maybe, just maybe. Gideon is the most sought after serial killer at large - a killer who's eluded the FBI for years and has baffled their most "gifted" profilers. That serial killer? None other than the "Chesapeake Ripper." This would explain why the Ripper's been silent for more than two years.</p>
-                                    <a href="#" class="read-more">Читать полную версию</a>
+                                    <a href="#" class="read-more">Read full story</a>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                 <div class="interview-body">
                                     <p><b>Article:</b></p>
                                     <p>He leaves no fingerprints, only crumbs. Police say the culprit is “dangerously peckish. Something chewy and terrifying is lurking in the break room of the Fenton County Probation Office. For months, employees have returned from lunch to find their desks violated — not by violence, but by snack theft. Ziplocs emptied. Granola bars reduced to sad, crinkly wrappers. One victim’s name-labeled hummus cup was licked clean and placed back in the fridge like a taunt.</p>
-                                    <a href="#" class="read-more">Читать полную версию</a>
+                                    <a href="#" class="read-more">Read full story</a>
                                 </div>
                             </div>
                         </div>
@@ -141,6 +141,21 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Login</h2>
+        <form id="authForm">
+            <input type="text" id="modalUsername" placeholder="Username" autocomplete="off" required>
+            <input type="password" id="modalPassword" placeholder="Password" required>
+            <div id="confirmPasswordGroup" style="display: none;">
+                <input type="password" id="modalConfirmPassword" placeholder="Confirm Password">
+            </div>
+            <button type="submit" id="modalSubmitBtn">Login</button>
+        </form>
     </div>
 </div>
 
@@ -153,9 +168,9 @@
                 e.preventDefault();
                 const query = searchInput.value.trim();
                 if (query === "") {
-                    alert("Введите текст для поиска по tattlecrime.com");
+                    alert("Please enter something to search on tattlecrime.com");
                 } else {
-                    alert(`Поиск по запросу: "${query}"\n(функция поиска есть, но мне лень её добавлять)`);
+                    alert(`Searching for: "${query}"\n(Search is not actually implemented, it's just for the vibe.)`);
                 }
             });
             searchInput.addEventListener('keypress', function(e) {
@@ -163,6 +178,119 @@
                     e.preventDefault();
                     searchBtn.click();
                 }
+            });
+        }
+        
+        const modal = document.getElementById('authModal');
+        const loginLink = document.getElementById('loginLink');
+        const signupLink = document.getElementById('signupLink');
+        const closeModalBtn = document.querySelector('.close-modal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+        const authForm = document.getElementById('authForm');
+        const usernameInput = document.getElementById('modalUsername');
+        const passwordInput = document.getElementById('modalPassword');
+        const confirmGroup = document.getElementById('confirmPasswordGroup');
+        const confirmInput = document.getElementById('modalConfirmPassword');
+
+        let currentMode = 'login';
+        
+        function openModal(mode) {
+            currentMode = mode;
+            usernameInput.value = '';
+            passwordInput.value = '';
+            if (confirmInput) confirmInput.value = '';
+            usernameInput.setCustomValidity('');
+            passwordInput.setCustomValidity('');
+            if (confirmInput) confirmInput.setCustomValidity('');
+            
+            if (mode === 'login') {
+                modalTitle.textContent = 'Login';
+                modalSubmitBtn.textContent = 'Login';
+                confirmGroup.style.display = 'none';
+                confirmInput.removeAttribute('required');
+            } else {
+                modalTitle.textContent = 'Sign Up';
+                modalSubmitBtn.textContent = 'Sign Up';
+                confirmGroup.style.display = 'block';
+                confirmInput.setAttribute('required', 'required');
+            }
+            modal.style.display = 'flex';
+            setTimeout(() => usernameInput.focus(), 50);
+        }
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        function showJokeMessage() {
+            alert("Sorry, this website is just a joke. You can't register or log in, silly. :)");
+        }
+        function handleSubmit(e) {
+            e.preventDefault();
+            
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+            if (username === '') {
+                alert("Please enter a username.");
+                usernameInput.focus();
+                return false;
+            }
+            if (password === '') {
+                alert("Please enter a password.");
+                passwordInput.focus();
+                return false;
+            }
+            
+            if (currentMode === 'signup') {
+                const confirm = confirmInput.value.trim();
+                if (confirm === '') {
+                    alert("Please confirm your password.");
+                    confirmInput.focus();
+                    return false;
+                }
+                if (password !== confirm) {
+                    alert("Passwords do not match. Try again.");
+                    confirmInput.focus();
+                    return false;
+                }
+            }
+            showJokeMessage();
+            closeModal();
+            return false;
+        }
+        if (loginLink) {
+            loginLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal('login');
+            });
+        }
+        if (signupLink) {
+            signupLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal('signup');
+            });
+        }
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        if (authForm) {
+            authForm.addEventListener('submit', handleSubmit);
+        }
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
         }
     })();
