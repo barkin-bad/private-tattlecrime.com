@@ -345,9 +345,8 @@ body::before {
     gap: 0;
 }
 
-/* Убираем все линии между статьями и над стрелкой */
 .mini-tattle-grid .tattle-item {
-    margin-bottom: 3px;  /* ровно 3px зазор */
+    margin-bottom: 3px;
 }
 
 .mini-tattle-grid .tattle-item:last-child {
@@ -360,7 +359,7 @@ body::before {
     background: transparent;
     font-family: 'Merriweather', Georgia, serif;
     font-weight: 400;
-    border-bottom: none;        /* Убрали линию между статьями */
+    border-bottom: none;
 }
 
 .tattle-title,
@@ -410,7 +409,7 @@ body::before {
     display: inline-block;
     width: 100%;
     font-weight: 400;
-    border-top: none;           /* Убрали полоску над стрелкой */
+    border-top: none;
 }
 
 .arrow-link {
