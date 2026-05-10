@@ -954,12 +954,12 @@ i, em, .italic {
 
 .interview-card:first-child .interview-stamp {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20px;
+    left: -30px;
     transform: scale(0.55);
     transform-origin: top left;
     pointer-events: none;
     z-index: 10;
-    max-width: none;           
+    max-width: none;
     height: auto;
 }
