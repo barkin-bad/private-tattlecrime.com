@@ -416,43 +416,50 @@ body::before {
     font-weight: 400;
 }
 
+.arrow-link {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: none !important;
+    line-height: 1;
+}
+
+.arrow-link img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.arrow-link:hover img {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.tattle-meta .arrow-link img {
+    width: 16px;
+}
+
+.tattle-meta a {
+    border-bottom: none !important;
+}
+
+.read-more.arrow-link {
+    border-bottom: none;
+    margin-top: 8px;
+}
+
 .tattle-meta a {
     color: #333;
     text-decoration: none;
     transition: color 0.2s, border-color 0.2s;
-    border-bottom: 1px solid transparent;
 }
 
 .tattle-meta a:hover {
     color: #b13e5a;
-    border-bottom-color: #b13e5a;
 }
 
-.arrow-readmore {
-    height: 16px;
-    width: auto;
-    vertical-align: middle;
-    transition: opacity 0.2s;
-    display: inline-block;
-}
-
-.tattle-meta a:hover .arrow-readmore,
-.read-more:hover .arrow-readmore {
-    opacity: 0.7;
-}
-
-.arrow-interview {
-    height: 24px;
-    width: auto;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-.interview-ripper {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
+.tattle-meta .arrow-link:hover {
+    color: inherit;
 }
 
 .interview-main {
@@ -554,10 +561,6 @@ body::before {
 
 .read-more:hover {
     color: #2c8c7a;
-    border-bottom-color: #2c8c7a;
-}
-
-.read-more:hover {
     border-bottom-color: #2c8c7a;
 }
 
