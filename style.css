@@ -342,15 +342,7 @@ body::before {
 .mini-tattle-grid {
     display: flex;
     flex-direction: column;
-    gap: 0;
-}
-
-.mini-tattle-grid .tattle-item {
-    margin-bottom: 3px;
-}
-
-.mini-tattle-grid .tattle-item:last-child {
-    margin-bottom: 0;
+    gap: 3px;
 }
 
 .tattle-item {
