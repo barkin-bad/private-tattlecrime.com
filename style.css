@@ -955,7 +955,7 @@ i, em, .italic {
 .interview-card:first-child .interview-stamp {
     position: absolute;
     top: -30px;
-    left: -37px;
+    left: -38px;
     transform: scale(0.55);
     transform-origin: top left;
     pointer-events: none;
