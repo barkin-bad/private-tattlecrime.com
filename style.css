@@ -346,8 +346,7 @@ body::before {
 }
 
 .mini-tattle-grid .tattle-item {
-    margin-bottom: 5px;
-    border-bottom: none;
+    margin-bottom: 2px;
 }
 
 .mini-tattle-grid .tattle-item:last-child {
@@ -357,6 +356,7 @@ body::before {
 .tattle-item {
     padding: 8px 24px 8px 0;
     transition: background 0.2s;
+    border-bottom: none;
     background: transparent;
     font-family: 'Merriweather', Georgia, serif;
     font-weight: 400;
@@ -366,6 +366,10 @@ body::before {
 .tattle-desc,
 .tattle-meta {
     margin-left: 24px;
+}
+
+.tattle-item:last-child {
+    border-bottom: none;
 }
 
 .tattle-item:hover {
