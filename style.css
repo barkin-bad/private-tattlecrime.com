@@ -346,7 +346,7 @@ body::before {
 }
 
 .mini-tattle-grid .tattle-item {
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     border-bottom: none;
 }
 
