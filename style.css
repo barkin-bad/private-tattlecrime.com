@@ -354,12 +354,18 @@ body::before {
 }
 
 .tattle-item {
-    padding: 8px 24px 8px 24px;
+    padding: 8px 24px 8px 0;
     transition: background 0.2s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     background: transparent;
     font-family: 'Merriweather', Georgia, serif;
     font-weight: 400;
+}
+
+.tattle-title,
+.tattle-desc,
+.tattle-meta {
+    margin-left: 24px;
 }
 
 .tattle-item:last-child {
@@ -825,7 +831,12 @@ body::before {
         font-size: 22px;
     }
     .tattle-item {
-        padding: 8px 18px;
+        padding: 8px 18px 8px 0;
+    }
+    .tattle-title,
+    .tattle-desc,
+    .tattle-meta {
+        margin-left: 18px;
     }
     .tattle-feed-header {
         font-size: 32px;
