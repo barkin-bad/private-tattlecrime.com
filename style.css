@@ -424,7 +424,7 @@ body::before {
 }
 
 .arrow-link img {
-    width: 20px;
+    width: 40px;
     height: auto;
     vertical-align: middle;
     transition: opacity 0.2s, transform 0.2s;
@@ -436,7 +436,7 @@ body::before {
 }
 
 .tattle-meta .arrow-link img {
-    width: 16px;
+    width: 32px;
 }
 
 .tattle-meta a {
