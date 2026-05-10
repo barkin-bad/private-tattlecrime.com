@@ -342,7 +342,7 @@ body::before {
 .mini-tattle-grid {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 0;
 }
 
 .tattle-item {
@@ -352,6 +352,10 @@ body::before {
     font-family: 'Merriweather', Georgia, serif;
     font-weight: 400;
     border-bottom: none;
+}
+
+.tattle-item:not(:last-child) {
+    border-bottom: 3px solid white;
 }
 
 .tattle-title,
