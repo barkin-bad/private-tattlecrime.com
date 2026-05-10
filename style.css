@@ -209,12 +209,26 @@ body::before {
 }
 
 .main-card {
+    position: relative;
     background-color: #ffffff;
     margin-top: 24px;
     margin-bottom: 60px;
     box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.35);
     overflow: hidden;
     border-radius: 0;
+}
+
+.interview-corner-stamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.75);
+    transform-origin: top left;
+    pointer-events: none;
+    z-index: 15;
+    max-width: none;
+    width: auto;
+    height: auto;
 }
 
 .main-content {
