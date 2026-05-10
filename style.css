@@ -524,6 +524,82 @@ body::before {
     border-bottom-color: #2c8c7a;
 }
 
+.interview-card.compact {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.interview-card.compact .interview-header {
+    padding: 12px 28px 4px 28px;
+}
+
+.interview-card.compact .interview-ripper {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.interview-card.compact .interview-subhead {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.interview-card.compact .interview-two-columns {
+    padding: 0 28px 16px 28px;
+    gap: 18px;
+}
+
+.interview-card.compact .interview-two-columns {
+    flex-direction: row;
+}
+
+.interview-card.compact .interview-photo {
+    flex: 0.7;
+    min-width: 120px;
+}
+
+.interview-card.compact .interview-photo-placeholder {
+    aspect-ratio: 3 / 4;  /* вертикальное соотношение */
+    background: linear-gradient(135deg, #4a3b3b 0%, #2a2222 100%);
+}
+
+.interview-card.compact .interview-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interview-card.compact .interview-text-content {
+    flex: 1.2;
+}
+
+.interview-card.compact .interview-text-content .interview-body p {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 8px;
+}
+
+.interview-card.compact .read-more {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .interview-card.compact .interview-two-columns {
+        flex-direction: column;
+    }
+    .interview-card.compact .interview-photo {
+        order: 2;
+        flex: auto;
+        max-width: 260px;
+        align-self: center;
+    }
+    .interview-card.compact .interview-text-content {
+        order: 1;
+    }
+}
+
+/* ======================================================================== */
+
 .modal {
     display: none;
     position: fixed;
@@ -792,6 +868,16 @@ body::before {
     }
     .modal-content input {
         padding: 10px 12px;
+    }
+
+    .interview-card.compact .interview-ripper {
+        font-size: 18px;
+    }
+    .interview-card.compact .interview-subhead {
+        font-size: 14px;
+    }
+    .interview-card.compact .interview-two-columns {
+        padding: 0 20px 16px 20px;
     }
 }
 
