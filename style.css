@@ -135,6 +135,7 @@ body::before {
     color: white;
     text-decoration: none;
     transition: opacity 0.2s;
+    cursor: pointer;
 }
 
 .auth-links a:hover {
@@ -429,7 +430,6 @@ body::before {
     border: 1px dashed #aaa;
 }
 
-/* Отступ между карточками внутри одного блока */
 .interview-card:not(:last-child) {
     margin-bottom: 40px;
 }
@@ -524,6 +524,118 @@ body::before {
     border-bottom-color: #2c8c7a;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px 30px 35px 30px;
+    border-radius: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'Merriweather', Georgia, serif;
+    animation: fadeInUp 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #b13e5a;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #b13e5a;
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+    font-family: 'Merriweather', Georgia, serif;
+    border-left: 4px solid #2c8c7a;
+    padding-left: 12px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-family: 'Merriweather', Georgia, serif;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: 0.2s;
+    outline: none;
+    border-radius: 0;
+}
+
+.modal-content input:focus {
+    border-color: #2c8c7a;
+    box-shadow: 0 0 0 2px rgba(44, 140, 122, 0.2);
+}
+
+.modal-content button {
+    background-color: #88354A;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', Georgia, serif;
+    margin-top: 10px;
+    border-radius: 0;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #6b2a3b;
+    transform: scale(0.98);
+}
+
+#confirmPasswordGroup {
+    transition: all 0.1s;
+}
+
 @media (max-width: 950px) {
     .main-logo .tattle,
     .main-logo .crime {
@@ -596,6 +708,9 @@ body::before {
     }
     .nav-about {
         margin-top: 8px;
+    }
+    .modal-content {
+        padding: 20px 22px 30px 22px;
     }
 }
 
@@ -672,9 +787,15 @@ body::before {
         width: 30px;
         height: 30px;
     }
+    .modal-content h2 {
+        font-size: 24px;
+    }
+    .modal-content input {
+        padding: 10px 12px;
+    }
 }
 
-button, input, .main-card, .tattle-item, .interview-card, .search-input, .search-btn, .tattle-feed, .interview-main, .tattle-badge {
+button, input, .main-card, .tattle-item, .interview-card, .search-input, .search-btn, .tattle-feed, .interview-main, .tattle-badge, .modal-content, .modal-content input, .modal-content button {
     border-radius: 0 !important;
 }
 
