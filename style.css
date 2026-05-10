@@ -424,7 +424,8 @@ body::before {
 }
 
 .arrow-link img {
-    width: 60px;
+    width: 100px;   
+    max-width: 100%;
     height: auto;
     vertical-align: middle;
     transition: opacity 0.2s, transform 0.2s;
@@ -436,7 +437,7 @@ body::before {
 }
 
 .tattle-meta .arrow-link img {
-    width: 48px;
+    width: 80px;
 }
 
 .tattle-meta a {
@@ -761,6 +762,12 @@ body::before {
     .freddie {
         font-size: 28px;
     }
+    .arrow-link img {
+        width: 70px;
+    }
+    .tattle-meta .arrow-link img {
+        width: 55px;
+    }
 }
 
 @media (max-width: 850px) {
@@ -825,6 +832,12 @@ body::before {
     }
     .modal-content {
         padding: 20px 22px 30px 22px;
+    }
+    .arrow-link img {
+        width: 60px;
+    }
+    .tattle-meta .arrow-link img {
+        width: 48px;
     }
 }
 
@@ -921,6 +934,12 @@ body::before {
     }
     .interview-card.compact .interview-two-columns {
         padding: 0 20px 16px 20px;
+    }
+    .arrow-link img {
+        width: 48px;
+    }
+    .tattle-meta .arrow-link img {
+        width: 38px;
     }
 }
 
