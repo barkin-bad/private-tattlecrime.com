@@ -479,11 +479,15 @@ body::before {
     border-radius: 0;
 }
 
-.interview-corner-img {
+.interview-main .interview-card:first-child {
+    overflow: visible;
+}
+
+.interview-main .interview-card:first-child .interview-corner-img {
     position: absolute;
     top: 0;
     left: 0;
-    transform: scale(0.75);
+    transform: translateY(-8px) scale(0.75);
     transform-origin: left top;
     z-index: 10;
     pointer-events: none;
@@ -644,6 +648,15 @@ body::before {
     }
     .interview-card.compact .interview-text-content {
         order: 1;
+    }
+    .interview-main .interview-card:first-child .interview-corner-img {
+        transform: translateY(-6px) scale(0.65);
+    }
+}
+
+@media (max-width: 550px) {
+    .interview-main .interview-card:first-child .interview-corner-img {
+        transform: translateY(-4px) scale(0.55);
     }
 }
 
@@ -847,9 +860,6 @@ body::before {
     .tattle-meta .arrow-link img {
         width: 48px;
     }
-    .interview-corner-img {
-        transform: scale(0.65);
-    }
 }
 
 @media (max-width: 550px) {
@@ -951,9 +961,6 @@ body::before {
     }
     .tattle-meta .arrow-link img {
         width: 38px;
-    }
-    .interview-corner-img {
-        transform: scale(0.55);
     }
 }
 
