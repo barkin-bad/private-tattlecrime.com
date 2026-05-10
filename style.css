@@ -429,8 +429,9 @@ body::before {
     border: 1px dashed #aaa;
 }
 
-.interview-main + .interview-main {
-    margin-top: 40px;
+/* Отступ между карточками внутри одного блока */
+.interview-card:not(:last-child) {
+    margin-bottom: 40px;
 }
 
 .interview-card {
@@ -679,4 +680,4 @@ button, input, .main-card, .tattle-item, .interview-card, .search-input, .search
 
 i, em, .italic {
     font-style: normal;
-}   
+}
