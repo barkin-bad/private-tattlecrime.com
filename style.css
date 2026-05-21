@@ -963,3 +963,98 @@ i, em, .italic {
     max-width: none;
     height: auto;
 }
+
+.main-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #b13e5a;
+    font-family: 'Cabin Condensed', sans-serif;
+    letter-spacing: -0.5px;
+    border-left: 6px solid #2c8c7a;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+
+.main-content p {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+    color: #2a2a2a;
+}
+
+.main-content a {
+    color: #b13e5a;
+    text-decoration: none;
+    border-bottom: 1px dashed #d6a3b2;
+    transition: 0.2s;
+}
+
+.main-content a:hover {
+    color: #2c8c7a;
+    border-bottom-color: #2c8c7a;
+}
+
+.about-footer-note {
+    margin-top: 48px;
+    padding: 24px 28px;
+    background: #f9f1e4;
+    border-top: 2px solid #88354A;
+    border-bottom: 2px solid #88354A;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Courier Prime', monospace;
+    box-shadow: inset 0 0 0 1px rgba(136, 53, 74, 0.2), 0 8px 12px rgba(0,0,0,0.05);
+}
+
+.about-note-stamp {
+    width: 70px;
+    height: 70px;
+    background-image: url('assets/images/СтрелкаИнтервью.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+    flex-shrink: 0;
+}
+
+.about-note-text {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-note-label {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #88354A;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+@media (max-width: 650px) {
+    .about-footer-note {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .about-note-stamp {
+        width: 55px;
+        height: 55px;
+    }
+    .main-content h1 {
+        font-size: 32px;
+        padding-left: 16px;
+    }
+    .main-content p {
+        font-size: 15px;
+    }
+}
