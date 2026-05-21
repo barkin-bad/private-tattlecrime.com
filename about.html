@@ -67,6 +67,22 @@
         </div>
     </div>
 </div>
+
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Login</h2>
+        <form id="authForm">
+            <input type="text" id="modalUsername" placeholder="Username" autocomplete="off" required>
+            <input type="password" id="modalPassword" placeholder="Password" required>
+            <div id="confirmPasswordGroup" style="display: none;">
+                <input type="password" id="modalConfirmPassword" placeholder="Confirm Password">
+            </div>
+            <button type="submit" id="modalSubmitBtn">Login</button>
+        </form>
+    </div>
+</div>
+        
 <script src="script.js"></script>
 </body>
 </html>
