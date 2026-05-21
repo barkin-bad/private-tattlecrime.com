@@ -1058,3 +1058,43 @@ i, em, .italic {
         font-size: 15px;
     }
 }
+
+.articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+.article-block {
+    background-color: #C9E8E0;
+    padding: 20px 28px;
+    transition: background 0.2s;
+}
+.article-block:hover {
+    background-color: #bde0d6;
+}
+.article-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    font-family: 'Merriweather', serif;
+}
+.article-desc {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #222;
+    margin-bottom: 14px;
+}
+.article-link {
+    color: #b13e5a;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed #d6a3b2;
+    transition: 0.2s;
+    display: inline-block;
+}
+.article-link:hover {
+    color: #2c8c7a;
+    border-bottom-color: #2c8c7a;
+}
