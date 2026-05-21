@@ -254,9 +254,13 @@ body::before {
     font-family: 'Courier Prime', monospace;
     font-weight: 700;
     font-size: 20px;
-    color: #111;
+    color: #000000;
     text-decoration: none;
     transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #B13E5A;
 }
 
 .nav-links li:not(:last-child)::after {
@@ -267,11 +271,6 @@ body::before {
     font-size: 20px;
     font-weight: 700;
     display: inline-block;
-}
-
-.nav-links a:hover,
-.nav-about a:hover {
-    color: #B13E5A;
 }
 
 .nav-about {
@@ -302,6 +301,10 @@ body::before {
     color: #111;
     text-decoration: none;
     transition: color 0.2s;
+}
+
+.nav-about a:hover {
+    color: #b13e5a;
 }
 
 .two-columns {
@@ -744,60 +747,6 @@ body::before {
     transition: all 0.1s;
 }
 
-.articles-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 24px;
-}
-
-.article-card {
-    background-color: #C9E8E0;
-    padding: 20px 28px;
-    transition: background 0.2s;
-}
-
-.article-card:hover {
-    background-color: #bde0d6;
-}
-
-.article-badge {
-    display: inline-block;
-    background-color: #88354A;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    margin-bottom: 12px;
-    font-family: 'Merriweather', Georgia, serif;
-    line-height: 1;
-}
-
-.article-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 12px;
-    font-family: 'Merriweather', serif;
-}
-
-.article-desc {
-    font-size: 15px;
-    line-height: 1.45;
-    color: #222;
-    margin-bottom: 14px;
-}
-
-.article-link {
-    display: inline-block;
-}
-
-.article-link .arrow-link img {
-    width: 90px;
-}
-
 @media (max-width: 950px) {
     .main-logo .tattle,
     .main-logo .crime {
@@ -814,9 +763,6 @@ body::before {
     }
     .tattle-meta .arrow-link img {
         width: 55px;
-    }
-    .article-link .arrow-link img {
-        width: 70px;
     }
 }
 
@@ -888,15 +834,6 @@ body::before {
     }
     .tattle-meta .arrow-link img {
         width: 48px;
-    }
-    .article-card {
-        padding: 16px 22px;
-    }
-    .article-title {
-        font-size: 20px;
-    }
-    .article-link .arrow-link img {
-        width: 60px;
     }
 }
 
@@ -984,6 +921,7 @@ body::before {
     .modal-content input {
         padding: 10px 12px;
     }
+
     .interview-card.compact .interview-ripper {
         font-size: 18px;
     }
@@ -999,21 +937,9 @@ body::before {
     .tattle-meta .arrow-link img {
         width: 38px;
     }
-    .article-card {
-        padding: 14px 18px;
-    }
-    .article-title {
-        font-size: 18px;
-    }
-    .article-desc {
-        font-size: 14px;
-    }
-    .article-link .arrow-link img {
-        width: 48px;
-    }
 }
 
-button, input, .main-card, .tattle-item, .interview-card, .search-input, .search-btn, .tattle-feed, .interview-main, .tattle-badge, .modal-content, .modal-content input, .modal-content button, .article-card {
+button, input, .main-card, .tattle-item, .interview-card, .search-input, .search-btn, .tattle-feed, .interview-main, .tattle-badge, .modal-content, .modal-content input, .modal-content button {
     border-radius: 0 !important;
 }
 
@@ -1131,4 +1057,73 @@ i, em, .italic {
     .main-content p {
         font-size: 15px;
     }
+}
+
+.articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.article-card {
+    background-color: #C9E8E0;
+    padding: 20px 28px;
+    transition: background 0.2s;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.article-card:hover {
+    background-color: #bde0d6;
+}
+
+.article-badge {
+    display: inline-block;
+    background-color: #88354A;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+    font-family: 'Merriweather', Georgia, serif;
+    border-radius: 0;
+    line-height: 1;
+}
+
+.article-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    font-family: 'Merriweather', Georgia, serif;
+}
+
+.article-desc {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #222;
+    margin-bottom: 14px;
+    font-weight: 400;
+}
+
+.article-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.article-link .arrow-link {
+    border-bottom: none;
+}
+
+.article-link .arrow-link img {
+    width: 100px;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.article-link .arrow-link:hover img {
+    opacity: 0.7;
+    transform: scale(0.95);
 }
