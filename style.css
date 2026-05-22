@@ -265,7 +265,7 @@ body::before {
 .nav-links li:not(:last-child)::after {
     content: " • ";
     margin: 0 20px 0 20px;
-    color: #B13E5A;
+    color: #2C8C7A;
     font-family: 'Courier Prime', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -657,10 +657,10 @@ body::before {
 .main-content h1 {
     font-size: 42px;
     font-weight: 700;
-    color: #b13e5a;
+    color: #000000;
     font-family: 'Cabin Condensed', sans-serif;
     letter-spacing: -0.5px;
-    border-left: 6px solid #2c8c7a;
+    border-left: 6px solid #B13E5A;
     padding-left: 20px;
     margin-top: 0;
     margin-bottom: 28px;
