@@ -259,13 +259,13 @@ body::before {
 
 .nav-links a:hover,
 .nav-about a:hover {
-    color: #B13E5A;
+    color: #000000;
 }
 
 .nav-links li:not(:last-child)::after {
     content: " • ";
     margin: 0 20px 0 20px;
-    color: #2c8c7a;
+    color: #B13E5A;
     font-family: 'Courier Prime', monospace;
     font-size: 20px;
     font-weight: 700;
