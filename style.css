@@ -732,7 +732,7 @@ body::before {
 
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
     justify-content: center;
     gap: 28px;
     margin-top: 32px;
