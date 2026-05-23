@@ -1050,3 +1050,14 @@ i, em, .italic {
         width: 55px;
     }
 }
+
+.nav-links a,
+.nav-about a {
+    border-bottom: none !important;
+}
+
+.main-content h1 {
+    border-left: none !important;
+    text-transform: none !important;
+    padding-left: 0 !important;
+}
