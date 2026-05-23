@@ -657,8 +657,8 @@ body::before {
 .main-content h1 {
     font-size: 42px;
     font-weight: 700;
-    color: #000000;
-    font-family: 'Cabin Condensed', sans-serif;
+    color: #B13E5A;
+    font-family: 'Merriweather', Georgia, serif;
     letter-spacing: -0.5px;
     border-left: 6px solid #B13E5A;
     padding-left: 20px;
