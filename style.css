@@ -1156,7 +1156,7 @@ i, em, .italic {
 
 .article-image-row img {
     flex: 1;
-    min-width: 180px;
+    min-width: 150px;
     max-width: 100%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border: 1px solid #ddd;
