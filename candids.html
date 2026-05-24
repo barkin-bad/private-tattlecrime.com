@@ -57,12 +57,39 @@
                 </div>
             </div>
 
-    <div class="main-card">
-        <div class="main-content">
-            <h1>Oops, the FBI confiscated everything!</h1>
-            <p>We're in the process of stealing the photo back, sorry.</p>
+<div class="main-card">
+    <div class="main-content">
+        <h1>Candids</h1>
+        <p>Exclusive snapshots from the scene — click any image to open gallery.</p>
+
+        <div class="candids-grid">
+            
+            <div class="candid-card" data-index="0">
+                <img class="candid-thumb" src="https://sun9-61.userapi.com/s/v1/ig1/PhcvJoRaIVX8ViQRMKRJh4jQcKZLYB6LdusTriYJaY_SS9gGSTpznE8CQxd1GiJ3bHIQPpse.jpg?quality=96&as=32x21,48x32,72x48,108x72,160x106,240x160,360x240,480x319,540x359,640x426,720x479,1080x719,1280x852,1440x958,2560x1704&from=bu&cs=2560x0" alt="Candid 1">
+                <div class="candid-title">Midnight in Baltimore</div>
+                <div class="candid-desc">Off the record — Freddie's lens never sleeps.</div>
+            </div>
+            
+            <div class="candid-card" data-index="1">
+                <img class="candid-thumb" src="https://sun9-24.userapi.com/s/v1/ig1/k7ntPXn3iR937whn-qdTPZqLyYY1GebSjlVeZV9yhmGU_oALfNHGeMaUzj2oip5VnWB5zfJT.jpg?quality=96&as=32x21,48x32,72x48,108x72,160x106,240x160,360x239,480x319,540x359,640x426,720x479,1080x718,1280x851,1440x958,2560x1703&from=bu&cs=2560x0" alt="Candid 2">
+                <div class="candid-title">Shadow on the Potomac</div>
+                <div class="candid-desc">Unseen angles from the waterfront.</div>
+            </div>
+            
+            <div class="candid-card" data-index="2">
+                <img class="candid-thumb" src="https://sun9-77.userapi.com/s/v1/ig1/iKH8zs-GzqtTddbdVXqcqibbUvQ10QwVjXQBpTX8dXRjltPFqzcZ-hl5Q1HCP95soBPHxS_a.jpg?quality=96&as=32x48,48x72,72x108,108x162,160x240,240x361,360x541,480x721,540x812,640x962,720x1082,1080x1623,1280x1924,1437x2160&from=bu&cs=1437x0" alt="Candid 3">
+                <div class="candid-title">The Ripper's Morning Coffee</div>
+                <div class="candid-desc">Allegedly taken near the BSHCI.</div>
+            </div>
+            
+            <div class="candid-card" data-index="3">
+                <img class="candid-thumb" src="https://sun9-32.userapi.com/s/v1/ig1/F6TmSnj5IEnqwyYF2V3kdQoz95SZH-cv0qDbsfDxRNsWm14facpsGVZUvNigiqUlPEHBlqb-.jpg?quality=96&as=32x21,48x32,72x48,108x72,160x106,240x160,360x239,480x319,540x359,640x426,720x479,1080x718,1280x851,1440x958,2560x1703&from=bu&cs=2560x0" alt="Candid 4">
+                <div class="candid-title">Freddie's Escape</div>
+                <div class="candid-desc">Seconds before the shutter clicked.</div>
+            </div>
         </div>
     </div>
+</div>
 </div>
 
 <div id="authModal" class="modal">
@@ -77,6 +104,21 @@
             </div>
             <button type="submit" id="modalSubmitBtn">Login</button>
         </form>
+    </div>
+</div>
+
+        <!-- лвйтбокс  -->
+<div id="galleryModal" class="gallery-modal">
+    <span class="gallery-close">&times;</span>
+    <div class="gallery-container">
+        <button class="gallery-prev">&#10094;</button>
+        <div class="gallery-view">
+            <img id="galleryImage" src="" alt="Full size">
+        </div>
+        <button class="gallery-next">&#10095;</button>
+    </div>
+    <div class="gallery-footer">
+        <a id="downloadBtn" class="gallery-download" href="#" download>Download image</a>
     </div>
 </div>
         
