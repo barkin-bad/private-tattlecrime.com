@@ -1,4 +1,4 @@
- (function() {
+(function() {
         const searchBtn = document.querySelector('.search-btn');
         const searchInput = document.querySelector('.search-input');
         if (searchBtn && searchInput) {
@@ -131,69 +131,75 @@
                 e.stopPropagation();
             });
         }
-         // CANDIDS GALLERY & LIGHTBOX
-const candidCards = document.querySelectorAll('.candid-card');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeLightbox = document.querySelector('.lightbox-close');
-const prevDot = document.querySelector('.prev-dot');
-const nextDot = document.querySelector('.next-dot');
-const downloadBtn = document.getElementById('download-btn');
 
-let currentIndex = 0;
-const images = [];
+document.addEventListener('DOMContentLoaded', function() {
+    const candidCards = document.querySelectorAll('.candid-card');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.querySelector('.lightbox-close');
+    const prevDot = document.querySelector('.prev-dot');
+    const nextDot = document.querySelector('.next-dot');
+    const downloadBtn = document.getElementById('download-btn');
 
-candidCards.forEach((card, idx) => {
-    const img = card.querySelector('img');
-    images.push(img.src);
-    card.addEventListener('click', () => {
-        currentIndex = idx;
-        openLightbox(currentIndex);
+    if (!candidCards.length || !lightbox) return;
+
+    let currentIndex = 0;
+    const images = [];
+
+    candidCards.forEach((card, idx) => {
+        const img = card.querySelector('img');
+        if (img) images.push(img.src);
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = idx;
+            openLightbox(currentIndex);
+        });
+    });
+
+    function openLightbox(index) {
+        if (!lightbox || !lightboxImg) return;
+        lightbox.style.display = 'flex';
+        lightboxImg.src = images[index];
+        updateDownloadLink(index);
+    }
+
+    function updateDownloadLink(index) {
+        if (!downloadBtn) return;
+        const url = images[index];
+        downloadBtn.href = url;
+        downloadBtn.download = `candid_${index+1}.jpg`;
+    }
+
+    function showNext() {
+        if (!images.length) return;
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex];
+        updateDownloadLink(currentIndex);
+    }
+
+    function showPrev() {
+        if (!images.length) return;
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex];
+        updateDownloadLink(currentIndex);
+    }
+
+    if (prevDot) prevDot.addEventListener('click', showPrev);
+    if (nextDot) nextDot.addEventListener('click', showNext);
+    if (closeLightbox) closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox && lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') showPrev();
+            else if (e.key === 'ArrowRight') showNext();
+            else if (e.key === 'Escape') lightbox.style.display = 'none';
+        }
     });
 });
-
-function openLightbox(index) {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = images[index];
-    updateDownloadLink(index);
-}
-
-function updateDownloadLink(index) {
-    const url = images[index];
-    downloadBtn.href = url;
-    const fileName = `candid_${index+1}.jpg`;
-    downloadBtn.download = fileName;
-}
-
-function showNext() {
-    currentIndex = (currentIndex + 1) % images.length;
-    lightboxImg.src = images[currentIndex];
-    updateDownloadLink(currentIndex);
-}
-
-function showPrev() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    lightboxImg.src = images[currentIndex];
-    updateDownloadLink(currentIndex);
-}
-
-if (prevDot) prevDot.addEventListener('click', showPrev);
-if (nextDot) nextDot.addEventListener('click', showNext);
-if (closeLightbox) closeLightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if (lightbox.style.display === 'flex') {
-        if (e.key === 'ArrowLeft') showPrev();
-        else if (e.key === 'ArrowRight') showNext();
-        else if (e.key === 'Escape') lightbox.style.display = 'none';
-    }
-});
-    })();
+     })();
