@@ -132,3 +132,79 @@
             });
         }
     })();
+
+(function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeLightbox = document.querySelector('.lightbox-close');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    let currentIndex = 0;
+    let fullImages = [];
+    
+    galleryItems.forEach((item, idx) => {
+        const fullUrl = item.getAttribute('data-full');
+        fullImages.push(fullUrl);
+        item.addEventListener('click', () => {
+            currentIndex = idx;
+            openLightbox(fullImages[currentIndex]);
+        });
+    });
+    
+    function openLightbox(imgSrc) {
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'flex';
+    }
+    
+    function closeLightboxFunc() {
+        lightbox.style.display = 'none';
+    }
+    
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + fullImages.length) % fullImages.length;
+        lightboxImg.src = fullImages[currentIndex];
+    }
+    
+    function showNext() {
+        currentIndex = (currentIndex + 1) % fullImages.length;
+        lightboxImg.src = fullImages[currentIndex];
+    }
+    
+    function downloadImage() {
+        const url = fullImages[currentIndex];
+        fetch(url)
+            .then(response => response.blob())
+            .then(blob => {
+                const link = document.createElement('a');
+                const objectUrl = URL.createObjectURL(blob);
+                link.href = objectUrl;
+                link.download = `tattlecrime_candid_${currentIndex+1}.jpg`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(objectUrl);
+            })
+            .catch(() => {
+                window.open(url, '_blank');
+            });
+    }
+    
+    if (closeLightbox) closeLightbox.addEventListener('click', closeLightboxFunc);
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+    if (downloadBtn) downloadBtn.addEventListener('click', downloadImage);
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightboxFunc();
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox || lightbox.style.display !== 'flex') return;
+        if (e.key === 'Escape') closeLightboxFunc();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+})();
