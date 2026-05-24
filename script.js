@@ -1,4 +1,4 @@
-(function() {
+ (function() {
         const searchBtn = document.querySelector('.search-btn');
         const searchInput = document.querySelector('.search-input');
         if (searchBtn && searchInput) {
@@ -131,7 +131,7 @@
                 e.stopPropagation();
             });
         }
-// CANDIDS GALLERY & LIGHTBOX
+         // CANDIDS GALLERY & LIGHTBOX
 const candidCards = document.querySelectorAll('.candid-card');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -196,5 +196,4 @@ document.addEventListener('keydown', (e) => {
         else if (e.key === 'Escape') lightbox.style.display = 'none';
     }
 });
-}
     })();
