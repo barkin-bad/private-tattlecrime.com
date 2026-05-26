@@ -1428,3 +1428,73 @@ i, em, .italic {
 .close-results:hover {
     color: #b13e5a;
 }
+
+        .feature-article .interview-highlight {
+            background: #fef6e8;
+            padding: 1.6rem 2rem;
+            margin: 2rem 0;
+            border-left: 6px solid #2C8C7A;
+            font-style: normal;
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: #1e2a2a;
+            box-shadow: inset 0 0 0 1px rgba(44, 140, 122, 0.15);
+        }
+        .feature-article .interview-highlight p {
+            margin-bottom: 0.5rem;
+            font-size: inherit;
+        }
+        .feature-article .interview-highlight strong {
+            color: #88354A;
+            font-weight: 700;
+        }
+        .feature-article .dialogue-line {
+            margin-bottom: 1.75rem;
+        }
+        .feature-article .dialogue-question {
+            font-weight: 700;
+            color: #B13E5A;
+            font-family: 'Courier Prime', monospace;
+            letter-spacing: -0.2px;
+        }
+        .feature-article .dialogue-answer {
+            margin-top: 0.35rem;
+            padding-left: 0;
+            color: #1f2e2e;
+            border-left: 2px solid #D8C3A5;
+            padding-left: 1.2rem;
+        }
+        .article-quote-micro {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            background: #F9F1E4;
+            padding: 0.9rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0;
+            border-bottom: 1px dashed #ccc;
+            border-top: 1px dashed #ccc;
+            color: #2c2b28;
+        }
+        .article-quote-micro i {
+            font-style: italic;
+            color: #88354A;
+        }
+        .ripper-signature {
+            font-family: 'Courier Prime', monospace;
+            text-align: right;
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 2px dotted #C9E8E0;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            color: #5e6b6b;
+        }
+        @media (max-width: 700px) {
+            .feature-article .interview-highlight {
+                padding: 1rem 1.2rem;
+            }
+            .feature-article .dialogue-answer {
+                padding-left: 0.8rem;
+            }
+        }
