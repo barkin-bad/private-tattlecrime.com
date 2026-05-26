@@ -1429,66 +1429,125 @@ i, em, .italic {
     color: #b13e5a;
 }
 
-.feature-article .dropcap::first-letter {
-    font-size: 4.2rem;
-    font-weight: 900;
+/* ===== NEW ARTICLE ENHANCEMENTS ===== */
+.feature-article {
+    max-width: 900px;
+}
+
+.article-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #88354A;
+    padding-bottom: 20px;
+}
+
+.article-section {
+    background: #88354A;
+    font-size: 12px;
+    padding: 5px 14px;
+    letter-spacing: 1.5px;
+}
+
+.feature-article h1 {
+    font-size: 52px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.article-meta {
+    font-size: 15px;
+    color: #666;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.article-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.article-meta span:first-child::before {
+    content: "✍️";
+    font-size: 14px;
+}
+
+.article-meta span:last-child::before {
+    content: "⏱️";
+    font-size: 14px;
+}
+
+.dropcap:first-letter {
+    font-size: 5em;
     float: left;
-    line-height: 0.8;
+    line-height: 0.85;
     margin-right: 12px;
-    color: #B13E5A;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-weight: 800;
+    color: #88354A;
     font-family: 'Merriweather', serif;
-    text-shadow: 1px 1px 0 #f9e7b3;
 }
 
-.feature-article img.lead-image,
-.feature-article .interview-photo img {
-    border-radius: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.interview-dialogue {
+    background: #fef7e8;
+    border-left: 4px solid #2c8c7a;
+    padding: 18px 24px;
+    margin: 32px 0;
+    font-family: 'Courier Prime', monospace;
+    font-size: 17px;
+    color: #1e1e1e;
 }
 
-.feature-article img.lead-image:hover,
-.feature-article .interview-photo img:hover {
-    transform: scale(1.01);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+.interview-question {
+    font-weight: 700;
+    color: #88354A;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    letter-spacing: -0.2px;
 }
 
-.feature-article blockquote {
-    margin: 36px 0;
-    padding: 20px 30px;
-    background: #fef5e8;
-    border-left: 6px solid #88354A;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #2c2c2c;
-    font-family: 'Merriweather', serif;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 4px 12px rgba(0,0,0,0.05);
+.interview-answer {
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-left: 2px solid #e0c8b0;
 }
 
-.feature-article blockquote p {
-    margin-bottom: 0;
-    font-size: 1.2rem;
+.back-link {
+    margin-top: 48px;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
 }
 
-.feature-article .article-pullquote {
-    background: #fff6ed;
-    padding: 24px 32px;
-    border-left: 8px solid #2C8C7A;
-    font-size: 1.6rem;
-    margin: 48px 0;
+.back-link a {
+    display: inline-block;
+    background: #2c8c7a;
+    color: white;
+    padding: 10px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.back-link a:hover {
+    background: #1f6e5f;
+    transform: scale(0.97);
 }
 
 @media (max-width: 700px) {
-    .feature-article .dropcap::first-letter {
-        font-size: 3rem;
+    .feature-article h1 {
+        font-size: 36px;
     }
-    .feature-article blockquote {
-        padding: 16px 20px;
+    .dropcap:first-letter {
+        font-size: 3.8em;
     }
-    .feature-article blockquote p {
-        font-size: 1rem;
-    }
-    .feature-article .article-pullquote {
-        font-size: 1.3rem;
-        padding: 18px 24px;
+    .interview-dialogue {
+        padding: 14px 18px;
+        font-size: 15px;
     }
 }
