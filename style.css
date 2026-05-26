@@ -1428,3 +1428,67 @@ i, em, .italic {
 .close-results:hover {
     color: #b13e5a;
 }
+
+.feature-article .dropcap::first-letter {
+    font-size: 4.2rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.8;
+    margin-right: 12px;
+    color: #B13E5A;
+    font-family: 'Merriweather', serif;
+    text-shadow: 1px 1px 0 #f9e7b3;
+}
+
+.feature-article img.lead-image,
+.feature-article .interview-photo img {
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-article img.lead-image:hover,
+.feature-article .interview-photo img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.feature-article blockquote {
+    margin: 36px 0;
+    padding: 20px 30px;
+    background: #fef5e8;
+    border-left: 6px solid #88354A;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #2c2c2c;
+    font-family: 'Merriweather', serif;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feature-article blockquote p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.feature-article .article-pullquote {
+    background: #fff6ed;
+    padding: 24px 32px;
+    border-left: 8px solid #2C8C7A;
+    font-size: 1.6rem;
+    margin: 48px 0;
+}
+
+@media (max-width: 700px) {
+    .feature-article .dropcap::first-letter {
+        font-size: 3rem;
+    }
+    .feature-article blockquote {
+        padding: 16px 20px;
+    }
+    .feature-article blockquote p {
+        font-size: 1rem;
+    }
+    .feature-article .article-pullquote {
+        font-size: 1.3rem;
+        padding: 18px 24px;
+    }
+}
