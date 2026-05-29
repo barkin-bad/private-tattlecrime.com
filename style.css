@@ -1067,6 +1067,7 @@ i, em, .italic {
     max-width: 860px;
     margin: 0 auto;
     padding: 20px 0 40px;
+    overflow: auto;
 }
 
 .article-header {
@@ -1499,4 +1500,37 @@ i, em, .italic {
 
 .feature-article.snack-ripper-variant .article-header {
     border-bottom-color: #2c8c7a;
+}
+
+.snack-slasher-figure {
+    float: right;
+    width: 320px;
+    margin: 0 0 20px 25px;
+    max-width: 50%;
+}
+
+.snack-slasher-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.snack-slasher-figure figcaption {
+    font-size: 11px;
+    font-family: 'Courier Prime', monospace;
+    color: #555;
+    margin-top: 8px;
+    text-align: center;
+    border-top: 1px dashed #ccc;
+    padding-top: 6px;
+}
+
+@media (max-width: 700px) {
+    .snack-slasher-figure {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+    }
 }
