@@ -1479,3 +1479,24 @@ i, em, .italic {
 .answer strong {
     color: #88354A;
 }
+
+.feature-article.snack-ripper-variant .article-section {
+    background-color: #2c8c7a;
+}
+
+.feature-article.snack-ripper-variant .article-pullquote {
+    border-left-color: #88354A;
+    color: #2c5a4f;
+}
+
+.feature-article.snack-ripper-variant .pullquote-author {
+    color: #88354A;
+}
+
+.feature-article.snack-ripper-variant h1 {
+    color: #2c6e5f;
+}
+
+.feature-article.snack-ripper-variant .article-header {
+    border-bottom-color: #2c8c7a;
+}
